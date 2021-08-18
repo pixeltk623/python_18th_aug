@@ -1,0 +1,10 @@
+git clone https://github.com/pixeltk623/python_18th_aug.git
+2. git status
+git add .
+
+git add "file name"
+3. git pull
+4. git commit -m "Done"
+5. git push
+
+6. git checkout "File name"
