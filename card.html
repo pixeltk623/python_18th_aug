@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+
+		* {
+			padding: 0px;
+			margin: 0px;
+			box-sizing: border-box;
+		}
+		.col {
+			width: 24%;
+			float: left;
+			background-color: black;
+			margin: 6px;
+			height: 250px;
+			color: white;
+		}
+
+		.col h1 {
+			font-size: 60px;
+			text-align: center;
+		}
+		.col p {
+			padding: 10px;
+			text-align: justify;
+		}
+
+		.row::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="row">
+			<div class="col">
+				<h1>123</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</p>
+				<img src="https://www.apjabdulkalamfoundation.org/images/about/abdulkalamprofile.jpg">
+			</div>
+			<div class="col"><h1>123</h1></div>
+			<div class="col"><h1>123</h1></div>
+			<div class="col"><h1>123</h1></div>
+		</div>
+		<div class="row">
+			<div class="col"><h1>123</h1></div>
+			<div class="col"><h1>123</h1></div>
+			<div class="col"><h1>123</h1></div>
+			<div class="col"><h1>123</h1></div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
