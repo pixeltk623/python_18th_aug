@@ -7,27 +7,31 @@
 		h1 {
 			text-align: center;
 		}
+
+		table tr td {
+			text-align: left;
+		}
 	</style>
 </head>
 <body>
 	<h1>Novell Services Login</h1>
 	<form method="POST" action="" enctype="multipart/form-data">
-	<table border="0" width="80%">
+	<table border="1" width="80%">
 		<tr>
 			<th>
 				<label>Username</label>
-					<th>
+					<td>
 					<input type="text" name="name" value="" required>
-					</th>
+					</td>
 			</th>
 		</tr>
 
 		<tr>
 			<th>
 				<label>Password</label>
-					<th>
+					<td>
 					<input type="Password" name="">
-					</th>
+					</td>
 			</th>
 		</tr>
 
@@ -50,45 +54,32 @@
 			</th>
 
 		<tr>
-			<th rowspan="4">
+			<th>
 				<label>Please specify your role:</label>
 					<th>
-						<input type="radio" name="role" value="Admin">Admin
+						<input type="radio" name="role" value="Admin">Admin4
+						<br>
+						<input type="radio" name="role" value="Engineer">Engineer
+						<br>
+						<input type="radio" name="role" value="Manager">Manager
+						<br>
+						<input type="radio" name="role" value="Guest">Guest
+						<br>
 					</th>
-			</th>
-		</tr>
-			<th>
-				<input type="radio" name="role" value="Engineer">Engineer
-			</th>
+			</th>	
 		<tr>
 			<th>
-				<input type="radio" name="role" value="Manager">Manager
-			</th>
-		</tr>
-		<tr>
-			<th>
-				<input type="radio" name="role" value="Guest">Guest
-			</th>
-		</tr>
-				<br><br>	
-		<tr>
-			<th rowspan="3">
 				<label>Single sign-on to the following:</label>
 					<br><br>
 					<th>
-						<input type="checkbox" name="">Mail
+						<span style="margin-left: -15px;"><input type="checkbox" name="">Mail</span>
+						<br>
+						<span><input type="checkbox" name="">Payroll</span>
+						<br>
+						<span style="margin-left: 28px;"><input type="checkbox" name="">Self-service</span>
+						<br>
 					</th>
 			</th>
-					
-		</tr>
-					<th>
-						<input type="checkbox" name="">Payroll
-					</th>
-		<tr>			
-			<th>
-						<input type="checkbox" name="">Self-service
-					</th>		
-		</tr>
 
 	</table>
 <br><br>

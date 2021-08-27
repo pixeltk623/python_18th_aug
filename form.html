@@ -1,112 +1,103 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<style type="text/css">
-		h2 {
-			text-align: center;
-		}
-	</style>
-</head>
-<body>
-	<h2>Form In HTML</h2>
+<script type="text/javascript">
+	import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-	<fieldset>
-		<legend>Registraion Form</legend>
-	<form method="POST" action="" enctype="multipart/form-data">
-		<!-- readonly disabled rows="15" cols="55" checked checked multiple size="2" min="2021-08-12" max="2021-08-29" -->
-		<label>Name</label>
-		<input type="text" name="first_name" value="" required autocomplete="off" placeholder="Enter Your Name">
-		<br><br>
-		<label>Email</label>
-		<input type="email" name="email" value=""  required>
-		<br><br>
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
 
-		<label>Qty</label>
-		<input type="number" name="">
-		<br><br>
-		<label>Gender</label>
-		<input type="radio" name="gender" value="Male">Male
-		<input type="radio" name="gender" value="Male">Female
-		<br><br>
-		<label>Hobby</label>
-		<input type="checkbox" name="">Cricket
-		<input type="checkbox" name="">Cricket
-		<input type="checkbox" name="">Cricket
-		<input type="checkbox" name="">Cricket
-		<input type="checkbox" name="">Cricket
-		<br><br>
 
-		<label>City</label>
+  constructor(private router:Router) { }
+  handler: any = null;
+  ngOnInit() {
 
-		<select name="city" required>
-			<option value="">select</option>
-			<option value="Vadodara">Vadodara</option>
-			<option value="Anand">Anand</option>
-			<option value="Bharuch">Bharuch</option>
-		</select>
+    this.loadStripe();
+  }
 
-		<br><br>
+  test() {
 
-		<label>Color</label>
-		<input type="color" name="">
-		<br><br>
+  }
 
-		<label>Password</label>
+  pay(amount: any) {
 
-		<input type="Password" name="">
+    var handler = (<any>window).StripeCheckout.configure({
+      key: 'pk_test_51Io2wqSCATDyHKfPEntTzavndPjV7DCBENTI4oDOKgHxoaXSHukCv0DSRhfMIehUSCkgGowZ2gSNjQCPYpPIMEdW00D6bKQdU6',
+      locale: 'auto',
+      token: function (token: any) {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+        console.log(token.id)
+        alert('Token Created!!');
+          fetch("http://localhost/training/amazon/payment.php", {
+            method : "POST",
+            body: JSON.stringify({
+              stripeToken: token.id,
+              amount: amount
+            }),
+            headers : {
+              "Content-type": "application/json; charset=UTF-8"
+            }
+          })
+          .then(response => response.json())
+          .then(json => {
+            console.log(json)
+          })
+        // fetch("http://localhost/training/amazon/payment.php", {
+        //   method: "POST",
+        //   body: JSON.stringify({
+        //     title: "foo",
+        //     body: "bar",
+        //     userId: 1,
+        //     stripeToken:token.id
+        //   }),
+        //   headers: {
+        //     "Content-type": "application/json; charset=UTF-8"
+        //   }
+        // })
+        //   .then(response => response.json())
+        //   .then(json => {
+        //     console.log(json)
+        //   })
+        //   .then(()=> {
+        //     window.location.href = "http://localhost:4200/";
+        //   })
+        //   ;
+      }
+    });
 
-		<br><br>
+    handler.open({
+      name: 'Demo Site',
+      description: '2 widgets',
+      amount: amount * 100
+    });
 
-		<input type="hidden" name="username" value="15654646">
-		<br><br>
+  }
 
-		<label>Date</label>
-		<input type="date" name="" >
-		<br><br>
+  loadStripe() {
 
-		<label>Date & Time</label>
-		<input type="datetime-local" name="" >
-		<br><br>
-		<label>Time</label>
-		<input type="time" name="" >
-		<br><br>
-		<label>Search</label>
-		<input type="search" name="" >
-		<br><br>
-		<label>Range</label>
-		<input type="Range" name="" value="0" min="0" max="5">
-		<br><br>
+    if (!window.document.getElementById('stripe-script')) {
+      var s = window.document.createElement("script");
+      s.id = "stripe-script";
+      s.type = "text/javascript";
+      s.src = "https://checkout.stripe.com/checkout.js";
+      s.onload = () => {
+        this.handler = (<any>window).StripeCheckout.configure({
+          key: 'pk_test_51Io2wqSCATDyHKfPEntTzavndPjV7DCBENTI4oDOKgHxoaXSHukCv0DSRhfMIehUSCkgGowZ2gSNjQCPYpPIMEdW00D6bKQdU6',
+          locale: 'auto',
+          token: function (token: any) {
+            // You can access the token ID with `token.id`.
+            // Get the token ID to your server-side code for use.
+            console.log(token)
+            alert('Payment Success!!');
+          }
+        });
+      }
 
-		<label>Month</label>
-		<input type="month" name="" >
-		<br><br>
-		<label>Week</label>
-		<input type="week" name="" >
-
-		<br><br>
-
-		<label>Address</label>
-		<textarea></textarea>
-		<br><br>
-		<label>Profile Pic</label>
-
-		<input type="file" name="" multiple>
-		<br><br>
-
-		<input type="reset" name="reset">
-
-		<input type="submit" name="">
-
-		<!-- <input type="text" name="name">
-		<input type="submit" name="">
-
-		<button type="button">Test</button> -->
-	</form>
-	</fieldset>
-
-<!-- 	<input type="submit" name="">
-
-	<button type="button">Test</button> -->
-</body>
-</html>
+      window.document.body.appendChild(s);
+    }
+  }
+}
+</script>

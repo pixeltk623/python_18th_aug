@@ -4,14 +4,31 @@
 	<meta charset="utf-8">
 	<title></title>
 	<style type="text/css">
+		table tr th,td {
+			padding: 10px;
+		}
+		table {
+			margin: auto;
+		}
 	table form tr th {text-align: center;}
 		h2 {
 			text-align: center;
 		}
+
+		input[type=text],input[type=email], input[type=password], input[type=date], input[type=number] {
+			width: 90%;
+		}
+		textarea {
+			width: 90%;
+		}
+
+		table {
+			background-color: lightgrey;
+		}
 	</style>
 </head>
 <body>
-	<table border="1" style="border-collapse: collapse;" width="100%">>
+	<table style="border-collapse: collapse;" width="500">
 		<form method="POST" action="">
 		<h2>REGISTRATION</h2> 
 
@@ -31,25 +48,27 @@
 		</tr>
 		
 		<tr>
-			<th><label>e-mail</label></th>
+			<th><label>Email</label></th>
 			<th><input type="email" name=""></th>
 		</tr>
 
 		<tr>
 			<th><label>Password</label></th>
-			<th><input type="passward" name=""></th>
+			<th><input type="password" name=""></th>
 		</tr>
 			
 		<tr>
 			<th><label>Date Of Birth</label></th>
-			<th><input type="BirthDate" name=""></th>
+			<th><input type="date" name=""></th>
 		</tr>
 			
 			
 		<tr>
 			<th><label>Gender</label></th>
-			<th><input type="radio" name="male">male
-			<input type="radio" name="female">female</th>
+			<th><input type="radio" name="male">Male
+			<input type="radio" name="female">Female
+			<input type="radio" name="female">Others
+		</th>
 
 		</tr>
 
