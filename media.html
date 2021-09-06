@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media in HTML</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>Media in HTML</h1>
+
+	
+
+	<h2>Video in HTML</h2>
+	<hr>
+	<!-- autoplay muted -->
+	<button type="button" onclick="videoPlayPause()">Play/Pause</button>
+
+	<button type="button" onclick="makeBig()">Make Big</button>
+
+	<button type="button" onclick="makeNormal()">Make Normal</button>
+	<br><br>
+	<video id="myVideo" controls width="500"  controlsList="nodownload">
+		<source src="media/video1.mp4" type="video/mp4">
+	</video>
+
+	<script type="text/javascript">
+		var myVideo = document.getElementById('myVideo');
+		console.log(myVideo);
+		function videoPlayPause() {
+			
+			//myVideo.play();
+
+			if(myVideo.paused) {
+				myVideo.play();
+			} else {
+				myVideo.pause();
+			}
+		}
+
+		function makeBig() {
+			myVideo.width = "800";
+		}
+
+		function makeNormal() {
+			myVideo.width = "300";
+		}
+	</script>
+</body>
+</html>

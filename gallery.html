@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		header {
+			text-align: center;
+			padding: 20px;
+			font-size: 20px;
+			font-family: verdana;
+		}
+		img {
+			width: 100%;
+			height: 250px;
+		}
+
+		.col {
+			width: 24%;
+			float: left;
+			margin: 5px;
+		}
+
+		@media screen and (min-width: 320px) and (max-width: 480px){ 
+			.col {
+				width: 100%;
+			}
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 1024px){ 
+			.col {
+				width: 48%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Image Gallery</h1>
+	</header>
+
+	<main>
+		<div class="row">
+			<div class="col">
+				<img src="https://images.unsplash.com/photo-1610878180933-123728745d22?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+			</div>
+			<div class="col">
+				<img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297__480.jpg">
+			</div>
+			<div class="col">
+				<img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg">
+			</div>
+			<div class="col">
+				<img src="https://images.unsplash.com/photo-1618588507085-c79565432917?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXRpZnVsJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<img src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg">
+			</div>
+			<div class="col">
+				<img src="https://images.unsplash.com/photo-1618588507085-c79565432917?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhdXRpZnVsJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+			</div>
+			<div class="col">
+				<img src="https://images.unsplash.com/photo-1610878180933-123728745d22?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FuYWRhJTIwbmF0dXJlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+				
+			</div>
+			<div class="col">
+				<img src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297__480.jpg">
+			</div>
+		</div>
+	</main>
+
+</body>
+</html>
