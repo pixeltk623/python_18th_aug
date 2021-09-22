@@ -42,29 +42,36 @@
 # print("area is:",area)
 
 
-print("herons formula")
-a=float(input("enter value of a:"))
-b=float(input("enter value of b:"))
-c=float(input("enter value of c:") )
+# print("herons formula")
+# a=float(input("enter value of a:"))
+# b=float(input("enter value of b:"))
+# c=float(input("enter value of c:") )
 
-s = (a+b+c)/2
+# s = (a+b+c)/2
 
-# print(s)
+# # print(s)
+
+# # # exit()
+
+# # at = (s-a)*(s-b)*(s-c)
+
+# # ax = s - at
+
+# # print(ax)
 
 # # exit()
 
-# at = (s-a)*(s-b)*(s-c)
+# ar=float((s-a)*(s-b)*(s-c))
 
-# ax = s - at
+# are=s*ar
 
-# print(ax)
+# area=are**0.5
 
-# exit()
+# print("area is:",area)
 
-ar=float((s-a)*(s-b)*(s-c))
 
-are=s*ar
 
-area=are**0.5
 
-print("area is:",area)
+print("km to miles")
+
+
