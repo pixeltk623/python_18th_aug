@@ -36,16 +36,25 @@
 
 #123 = 1 + 2 + 3 = 5
 
-userInput = int(input("Enter The Number: "))
-sumOfDigits = 0
-while userInput>0:
-	rem = userInput%10 #3 2 
-	sumOfDigits = sumOfDigits+rem # 3 + 2 +1 = 6
-	# userInput /= 10
-	userInput = int(userInput/10) #12
+# userInput = int(input("Enter The Number: "))
+# sumOfDigits = 0
+# while userInput>0:
+# 	rem = userInput%10 #3 2 
+# 	sumOfDigits = sumOfDigits+rem # 3 + 2 +1 = 6
+# 	# userInput /= 10
+# 	userInput = int(userInput/10) #12
 
 
-print(sumOfDigits) 
+# print(sumOfDigits) 
+
+for x in range(1,10):
+	for y in range(1,x+1):
+		print("*", end="")
+	print("\n")
+
+
+
+
 
 
 
