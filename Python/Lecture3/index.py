@@ -7,14 +7,14 @@
 # 	print("Hello")
 # else:
 # 	print("Hi")
-
+#hello
 # exit()
 # number = 12345
 # rev = 0
 # while number>0:
 # 	rem = number%10
-# 	rev = (rev*10)+rem #5 
-# 	number = int(number/10) 
+# 	rev = (rev*10)+rem #5
+# 	number = int(number/10)
 
 
 # print(rev) #543
@@ -38,13 +38,13 @@
 #a + b
 
 # def printName():
-# 	print("Hello This is Sharvan") 
+# 	print("Hello This is Sharvan")
 
 
-# printName()	
-# printName()	
-# printName()	
-# printName()	
+# printName()
+# printName()
+# printName()
+# printName()
 
 
 # def sumOfTwoDigits():
