@@ -1,8 +1,8 @@
 import socket
 s = socket.socket()
 print('socket Created')
-
-s.bind(('localhost',8989))
+bind_ip = "192.168.29.180"
+s.bind((bind_ip,8989))
 s.listen(3)
 print('waiting for connection')
 
@@ -17,3 +17,6 @@ while True:
 
 	c.close()
 
+# 192.168.29.180 = > Sharvan
+
+# 192.168.29.18
