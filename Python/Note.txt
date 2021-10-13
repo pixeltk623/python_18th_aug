@@ -1,0 +1,100 @@
+# Set Items
+# Set items are unordered, unchangeable, and do not allow duplicate values.
+
+Imp Function of set
+
+add()
+update() =>  any iterator object
+pop()
+
+remove()
+discard()
+
+clear()
+del
+
+
+1. union()
+
+You can use the union() method that returns a new set containing all items from both sets, or the 
+
+2. update() 
+
+method that inserts all the items from one set into another:
+
+Keep ONLY the Duplicates
+
+3. intersection_update()
+
+The intersection_update() method will keep only the items that are present in both sets.
+
+
+4. intersection()
+
+The intersection() method will return a new set, that only contains the items
+that are present in both sets.
+
+5. symmetric_difference_update() 
+Keep All, But NOT the Duplicates
+
+The symmetric_difference_update() method will keep only the elements that are NOT
+present in both sets.
+
+6. symmetric_difference() => New Set
+
+
+Dictionary
+Dictionaries are used to store data values in key:value pairs.
+
+A dictionary is a collection which is ordered*, changeable and does not allow duplicates.
+
+Imp Function of dict
+
+get()
+
+There is also a method called get() that will give you the same result:
+
+keys()
+
+The keys() method will return a list of all the keys in the dictionary.
+
+values()
+
+The values() method will return a list of all the values in the dictionary.
+
+items()
+
+The items() method will return each item in a dictionary, as tuples in a list.
+
+
+
+update() 
+The update() method will update the dictionary with the items from the given argument.
+
+The argument must be a dictionary, or an iterable object with key:value pairs.
+
+The update() method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.
+
+pop()
+
+The pop() method removes the item with the specified key name:
+
+popitem()
+
+The popitem() method removes the last inserted item (in versions before 3.7, a random item is removed instead):
+
+
+del thisdict
+
+clear()
+
+The clear() method empties the dictionary:
+
+copy()
+
+mydict = thisdict.copy()
+
+
+
+
+

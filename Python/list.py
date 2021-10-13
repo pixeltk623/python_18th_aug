@@ -459,78 +459,78 @@ studentList = ["Sharvan","Meet","Akasht","Darshan","Ram","ABC","XYZ"]
 
 # exit()
 
-studentList1 = ["sharvan","Meet","akasht","Darshan","ram","aBC","xYZ", "Ant"]
+# studentList1 = ["sharvan","Meet","akasht","Darshan","ram","aBC","xYZ", "Ant"]
 
-newList = []
-for x in studentList1:
-	newList.append(x.lower())
+# newList = []
+# for x in studentList1:
+# 	newList.append(x.lower())
 
-print(newList.count("meet"))
-print(newList)
+# print(newList.count("meet"))
+# print(newList)
 
-exit()
-studentList1.lower()
+# exit()
+# studentList1.lower()
 
-print(studentList1)
+# print(studentList1)
 
-exit()
+# exit()
 
-print(studentList1.count("Meet"))
+# print(studentList1.count("Meet"))
 
-exit()
+# exit()
 
-list1 = ["a", "b" , "c"]
-list2 = [1, 2, 3]
-list3 = [True, False, True]
+# list1 = ["a", "b" , "c"]
+# list2 = [1, 2, 3]
+# list3 = [True, False, True]
 	
-list1.extend(list2)
-list1.extend(list3)
-print(list1)
+# list1.extend(list2)
+# list1.extend(list3)
+# print(list1)
 
-exit()
-students = list(studentList1)
+# exit()
+# students = list(studentList1)
 
-print(students)
+# print(students)
 
-exit()
+# exit()
 
-studentList2 = studentList1.copy()
+# studentList2 = studentList1.copy()
 
-print(studentList1)
+# print(studentList1)
 
-print(studentList2)
-exit()
+# print(studentList2)
+# exit()
 
-studentList1.reverse()
+# studentList1.reverse()
 
-print(studentList1)
-exit()
+# print(studentList1)
+# exit()
 
-studentList1.sort(key = str.lower)
+# studentList1.sort(key = str.lower)
 
-print(studentList1)
-
-
+# print(studentList1)
 
 
-var = ['ant','bat','cat','Bat','Lion','Goat','Cat','Ant']
-var.sort(key = str.lower)
-
-print(var)
 
 
-#['ant', 'Ant', 'bat', 'Bat', 'cat', 'Cat', 'Goat', 'Lion']
+# var = ['ant','bat','cat','Bat','Lion','Goat','Cat','Ant']
+# var.sort(key = str.lower)
 
-['ant', 'Ant', 'bat', 'Bat', 'cat', 'Cat', 'Goat', 'Lion']
+# print(var)
 
-exit()
-studentList = ["Banana", "Orange", "Kiwi", "cherry","Cat"]
+
+# #['ant', 'Ant', 'bat', 'Bat', 'cat', 'Cat', 'Goat', 'Lion']
+
+# ['ant', 'Ant', 'bat', 'Bat', 'cat', 'Cat', 'Goat', 'Lion']
+
+# exit()
+# studentList = ["Banana", "Orange", "Kiwi", "cherry","Cat"]
+
+# # print(studentList)
+
+# studentList.sort(key = str.lower)
 
 # print(studentList)
-
-studentList.sort(key = str.lower)
-
-print(studentList)
 
 # rollNo = [171141,45,8,78,988,128]
 
@@ -545,3 +545,256 @@ print(studentList)
 # print(rollNo)
 
 # print(studentList)
+
+
+studentList1 = ["sharvan","Meet","akasht","Darshan","ram","aBC","xYZ", "Ant"]
+
+# studentList1.insert(9,"odd")
+
+# print(studentList1)
+
+# studentList1[2:4] = ["adsas","adsas"]
+
+#print(studentList1)
+
+# newlist = [x for x in studentList1 if 'a' in x]
+
+# print(newlist)
+
+# --------------------Tuple -----------------------
+
+# Tuple Items
+# Tuple items are ordered, unchangeable, and allow duplicate values.
+
+tuple1 = ("sharvan","Meet","akasht","Darshan","sharvan","Meet","akasht","Darshan")
+
+thistuple  = tuple(("sharvan","Meet","akasht","Darshan"))
+
+# print(thistuple)
+
+# print(type(tuple1))
+
+# print(tuple1)
+
+# print(tuple1[1])
+# print(tuple1[-1])
+# print(tuple1[2:5])
+# print(tuple1[:4])
+# print(tuple1[2:])
+# print(tuple1[-4:-1])
+
+# Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created.
+
+# tuple2 = list(tuple1)
+
+# tuple2[1] = "Hello"
+
+# print(tuple2)
+
+# tuple1 = tuple(tuple2)
+
+# print(tuple1)
+
+
+
+# thistuple = ("apple", "banana", "cherry")
+# y = ("orange",)
+# thistuple += y
+
+# print(thistuple)
+
+
+# thistuple = ("apple", "banana", "cherry")
+# y = list(thistuple)
+# y.remove("apple")
+# thistuple = tuple(y)
+
+# thistuple = ("apple", "banana", "cherry")
+# del thistuple
+# print(thistuple) #this will raise an error because the tuple no longer exists
+
+
+# st = ("Sharvan","Sanjeev","Raushan")
+
+# #(cse,it,aei) = st
+
+# (cse,it,aei) = st
+
+# print(cse)
+# print(it)
+# print(aei)
+
+
+# Note: The number of variables must match the number of values in the tuple, 
+# if not, you must use an asterisk to collect the remaining values as a list.
+
+# st = ("Sharvan","Sanjeev","Sanjeev","Sanjeev","Raushan")
+# st1 = ("asdas","asdasd")
+# (cse,*it,aei) = st
+
+# print(cse)
+# print(it)
+# print(aei)
+
+# for x in st:
+# 	print(x)
+
+
+# print(st + st1)
+
+# print(st*10)
+
+# print(st.index("Raushan"))
+# print(st.count("Sanjeev"))
+
+
+# ------------SET-------------------
+
+# Set items are unordered, unchangeable, and do not allow duplicate values.
+
+
+
+thisSet = {"Sharvan","Sanjeev","Raushan"}
+
+# thisSet = set(("Sharvan","Sanjeev","Raushan"));
+# print(thisSet)
+
+# print(type(thisSet))
+
+# for x in thisSet:
+# 	print(x)
+
+# print("Sharvan" in thisSet)
+
+# thisSet.add("shweta")
+
+# print(thisSet)
+
+# newSet = ("asdasd","kdsasa")
+
+# mylist = ["kiwi", "orange"]
+
+# thisSet.update(mylist)
+
+# print(thisSet)
+
+
+#thisSet.remove("Sharvan")
+
+# Note: If the item to remove does not exist, remove() will raise an error.
+
+# thisSet.discard("Sharvan")
+
+# thisSet.pop()
+# thisSet.clear()
+
+
+# print(thisSet)
+
+# del thisSet
+
+# print(thisSet)
+
+
+# There are several ways to join two or more sets in Python.
+
+# You can use the union() method that returns a new set containing all items from both sets, or the update() method that inserts all the items from one set into another:
+
+# set1 = {"a", "b" , "c"}
+# set2 = {1, "b", 3}
+
+# set3 = set1.union(set2)
+#set1.update(set2)
+# print(set3)
+
+#print(set1)
+
+# x = {"apple", "banana", "cherry"}
+# y = {"google", "microsoft", "apple"}
+
+# x.intersection_update(y)
+
+# print(x)
+
+
+# x = {"apple", "banana", "cherry"}
+# y = {"google", "microsoft", "apple"}
+
+# z = x.intersection(y)
+
+# print(z)
+
+
+# x = {"apple", "banana", "cherry"}
+# y = {"google", "microsoft", "apple"}
+
+# x.symmetric_difference_update(y)
+
+# print(x)
+
+# x = {"apple", "banana", "cherry"}
+# y = {"google", "microsoft", "apple"}
+
+# z = x.symmetric_difference(y)
+
+# print(z)
+
+
+# Dictionary
+# Dictionaries are used to store data values in key:value pairs.
+
+# A dictionary is a collection which is ordered*, changeable and does not allow duplicates.
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+# print(thisdict)
+# print(thisdict["brand"])
+
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+
+thisdict = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+
+# print(thisdict.get("brand"))
+
+# #print(y)
+
+# print(thisdict.keys())
+
+# car = {
+# "brand": "Ford",
+# "model": "Mustang",
+# "year": 1964
+# }
+
+# x = car.keys()
+
+# print(x) #before the change
+
+
+
+# car["color"] = "white"	
+
+# print(x) #after the change
+
+# car["color"] = "white"
+
+# print(x) #after the change
+
+
+x = thisdict.values()
+
+print(x)
