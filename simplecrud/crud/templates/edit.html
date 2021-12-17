@@ -31,6 +31,67 @@
               <input type="text" name="email" id="email" class="form-control" placeholder="Email" value="{{ all_data.email }}">
           </div>
 
+          <div class="form-group">
+            <div class="mb-2">
+                <label class="form-check-label" for="exampleRadios1">
+                    Gender 
+                </label>
+
+            </div>
+            <div class="form-check">
+
+              <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Male"  {% if 'Male' in all_data.gender  %} checked {% endif %}>
+
+              <label class="form-check-label" for="exampleRadios1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="Female" {% if 'Female' in all_data.gender  %} checked {% endif %}>            
+              <label class="form-check-label" for="exampleRadios2">
+                Female
+              </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="mb-2">
+                <label class="form-check-label" for="exampleRadios1">
+                    Hobby
+                </label>
+
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Cricket" id="defaultCheck1" name="hobby" {% if 'Cricket' in all_data.hobby  %} checked {% endif %}>
+              <label class="form-check-label" for="defaultCheck1">
+               Cricket
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Football" id="defaultCheck1" name="hobby" {% if 'Football' in all_data.hobby  %} checked {% endif %}>
+              <label class="form-check-label" for="defaultCheck1">
+               Football
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Badminton" id="defaultCheck1" name="hobby" {% if 'Badminton' in all_data.hobby  %} checked {% endif %}>
+              <label class="form-check-label" for="defaultCheck1">
+               Badminton
+              </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>City</label>
+            <select name="city" class="form-control">
+                <option value="">Select</option>
+                <option value="Bharuch" {% if 'Bharuch' in all_data.city  %} selected {% endif %}>Bharuch</option>
+                <option value="Vadodara" {% if 'Vadodara' in all_data.city  %} selected {% endif %}>Vadodara</option>
+                <option value="Anand" {% if 'Anand' in all_data.city  %} selected {% endif %}>Anand</option>
+                <option value="Surat" {% if 'Surat' in all_data.city  %} selected {% endif %}>Surat</option>
+            </select>
+        </div>
+
           <input type="hidden" name="uid" value="{{ all_data.id }}">
 
         <div class="form-group">

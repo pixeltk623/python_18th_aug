@@ -11,26 +11,84 @@
     <title>Hello, world!</title>
   </head>
   <body>
-   <div class="container mt-3">
-    <h1 class="text-primary text-center">Crud In Django</h1>
-    <a href="/" class="btn btn-warning mb-3">Back To Home</a>
+   <div class="container mt-2">
+   <!--  <h1 class="text-primary text-center">Crud In Django</h1> -->
+    <a href="/" class="btn btn-warning mb-2">Back To Home</a>
       <form method="post" action="{% url 'store' %}">
         {% csrf_token %}
           <div class="form-group">
               <label>First Name: </label>
-              <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name">
+              <input type="text" name="fname" id="fname" class="form-control form-control-sm" placeholder="First Name">
           </div>
       
         <div class="form-group">
               <label>Last Name: </label>
-              <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name">
+              <input type="text" name="lname" id="lname" class="form-control form-control-sm" placeholder="Last Name">
           </div>
      
         <div class="form-group">
               <label>Email: </label>
-              <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+              <input type="text" name="email" id="email" class="form-control form-control-sm" placeholder="Email">
           </div>
 
+        <div class="form-group">
+            <div class="mb-2">
+                <label class="form-check-label" for="exampleRadios1">
+                    Gender
+                </label>
+
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="Male">
+              <label class="form-check-label" for="exampleRadios1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="Female">
+              <label class="form-check-label" for="exampleRadios2">
+                Female
+              </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="mb-2">
+                <label class="form-check-label" for="exampleRadios1">
+                    Hobby
+                </label>
+
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Cricket" id="defaultCheck1" name="hobby">
+              <label class="form-check-label" for="defaultCheck1">
+               Cricket
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Football" id="defaultCheck1" name="hobby">
+              <label class="form-check-label" for="defaultCheck1">
+               Football
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Badminton" id="defaultCheck1" name="hobby">
+              <label class="form-check-label" for="defaultCheck1">
+               Badminton
+              </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>City</label>
+            <select name="city" class="form-control">
+                <option value="">Select</option>
+                <option value="Bharuch">Bharuch</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Anand">Anand</option>
+                <option value="Surat">Surat</option>
+            </select>
+        </div>
 
         <div class="form-group">
               <input type="submit" name="submit" class="btn btn-primary" onclick="return validateForm()">

@@ -16,10 +16,23 @@ def create(request):
 def store(request):
 
 	if request.method=='POST':
+
+		print(request.POST)
 		fname = request.POST['fname']
 		lname = request.POST['lname']
 		email = request.POST['email']
-		p = Person(first_name=fname, last_name=lname,email=email)
+		if 'gender' in request.POST:
+			gender = request.POST['gender']
+		else:
+			gender = ''
+
+		if 'hobby' in request.POST:
+			hobby = request.POST.getlist('hobby')
+			hobby = ",".join(hobby)
+		else:
+			hobby = ''
+		city = request.POST['city']
+		p = Person(first_name=fname, last_name=lname,email=email, gender = gender, hobby=hobby,city=city)
 		p.save()
 		messages.add_message(request, messages.INFO, 'User Has been Created.')
 		return redirect('/')
@@ -40,7 +53,7 @@ def show(request, id):
 
 def edit(request, id):
 	b = Person.objects.get(pk=id)
-	print(b)
+	print(b.hobby)
 	return render(request, 'edit.html', {'all_data': b})
 
 def update(request):
@@ -50,6 +63,17 @@ def update(request):
 		b.first_name = request.POST['fname']
 		b.last_name = request.POST['lname']
 		b.email = request.POST['email']
+		if 'gender' in request.POST:
+			b.gender = request.POST['gender']
+		else:
+			b.gender = ''
+
+		if 'hobby' in request.POST:
+			hobby = request.POST.getlist('hobby')
+			b.hobby = ",".join(hobby)
+		else:
+			hobby = ''
+		b.city = request.POST['city']
 		b.save()
 	messages.add_message(request, messages.INFO, 'User Has been Updated.')
 	return redirect('/')
