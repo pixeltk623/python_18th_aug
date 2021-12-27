@@ -5,9 +5,9 @@ import os
 SEPARATOR = "<SEPARATOR>"
 BUFFER_SIZE = 4096 # send 4096 bytes each time step
 
-host = "localhost"
-port = 5001
-filename = "dummy.csv"
+host = "192.168.29.180"
+port = 4598
+filename = "new.csv"
 
 filesize = os.path.getsize(filename)
 
@@ -29,4 +29,4 @@ with open(filename, "rb") as f:
             break
         s.sendall(bytes_read)
         progress.update(len(bytes_read))
-s.close()
+#s.close()
